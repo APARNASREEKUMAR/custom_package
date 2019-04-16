@@ -13,7 +13,9 @@ class CalculatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // register our controller
+    $this->app->make('Devdojo\Calculator\CalculatorController');
+    $this->loadViewsFrom(__DIR__.'/views', 'calculator');
     }
 
     /**
